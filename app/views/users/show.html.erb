@@ -1,0 +1,7 @@
+<div class="user_box1">
+    <p><%= @nickname %>さんの実践一覧</p>
+    <% @lessons.each do |lesson| %>
+      <%= render partial: "lessons/lessons", locals: { lesson: lesson } %>
+    <% end %>
+    <%= paginate(@lessons) %>
+</div>

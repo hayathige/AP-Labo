@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>APLabo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <!--application.cssで読み込んでいるので、記述しなくて良い-->
+      <!--<link rel="stylesheet" href="slick.css">-->
+      <!--<link rel="stylesheet" href="slick-theme.css">-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="slick.min.js"></script>
+      
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_title">
+        <h1 class="title">
+          <a href="/">AP Labo</a>
+        </h1>
+      </div>
+      
+      <div class="header_menu">
+      <nav class="menu">
+        <ul>
+          <% if user_signed_in? %>  
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <% end %>
+            <li><a href="#">実践事例</a></li>
+            <li><a href="#">授業マニュアル</a></li>
+            <li><a href="#">年間指導計画案</a></li>
+            <li><a href="#">リンク集</a></li>
+        </ul>
+       </nav>
+      </div>
+      
+    </header>
+    
+    <script type='text/javascript' charset='utf-8'>
+      $(function(){
+        $.material.init();
+      });
+    </script>
+    
+    <main>
+      <%= bootstrap_flash %>
+      <%= yield %>
+    </main
+      
+    <footer>
+      <p>
+        Copyright AP-Labo 2020.
+      </p>
+    </footer>
+  </body>
+  
+</html>

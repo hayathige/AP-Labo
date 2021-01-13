@@ -1,0 +1,20 @@
+<div class="content_post" style="background-image: url(assets/back.jpg);">
+    <p><%= lesson.user.nickname %></p>
+    <p><%= lesson.subject %></p>
+    <p><%= lesson.text %><p/>
+    <%= image_tag lesson.image.variant(resize:'300x300'), class:lesson if lesson.image.attached? %>
+    
+     <ul class="more_list">
+        <li>
+            <%= link_to '詳細', "/lessons/#{lesson.id}", method: :get %>
+        </li>
+        <% if user_signed_in? && current_user.id == lesson.user_id %>
+        <li>
+             <%= link_to '編集', "/lessons/#{lesson.id}/edit", method: :get %>
+        </li>
+        <li>
+             <%= link_to '削除', "/lessons/#{lesson.id}", method: :delete %>
+        </li>
+     </ul>
+    <% end %>
+</div>

@@ -1,0 +1,34 @@
+.lesson_box1{
+    width: auto;
+    /*height: 500px;*/
+    background-color: orange;
+    padding-top: 80px;
+}
+
+.new_box1{
+    width: auto;
+    height: 600px;
+    background-color: orange;
+    padding-top: 80px;
+}
+
+.success{
+    width: auto;
+    height: 500px;
+    background-color: orange;
+    padding-top: 80px;
+}
+
+.destroy{
+    width: auto;
+    height: 500px;
+    background-color: orange;
+    padding-top: 80px;
+}
+
+.edit{
+    width: auto;
+    height: 500px;
+    background-color: orange;
+    padding-top: 80px;
+}

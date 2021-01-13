@@ -1,0 +1,63 @@
+<div class="contents">
+  <div class=box1>
+    <div class="slick1">
+      <div class=b><img class="c" src="assets/2.jpg"></div>
+      <div class=b><img class="c" src="assets/1.jpg"></div>
+      <div class=b><img class="c" src="assets/3.jpg"></div>
+    </div>
+    
+    <script type="text/javascript">
+      $(function(){
+          $('.slick1').slick({
+            autoplay: true,
+            dots: true,
+          });
+        });
+    </script>
+  </div>
+
+
+  <div class="box2">
+    <div class="greeting"><h1>小学校プログラミング教育実践サイト　AP-Laboへようこそ！</h1></div>
+    <div class="greeting"><h2>↓実践事例を投稿しよう！↓</h2></div>
+    <a href="/lessons"><img class="lesson_link" src="assets/computer_girl.png" alt=""></a>
+    <div class="greeting2"><h2>↓クイズに挑戦しよう！↓<h2></div>
+    <a href="/quizzes"><img class="quiz_link" src="assets/quiz_man.png" alt=""></a>
+  </div>
+
+  <div class=box4>
+    <div class="tab-menu">
+      <ul class="tab_ul">
+        <li id="left" class="selected">アンプラグド</li>
+        <li id="center">ソフトウェア</li>
+        <li id="right">フィジカル</li>
+      </ul>
+
+      <div class="tab_contents">
+        <div class="left">
+          <p>コンピューターを使わないプログラミング授業</p>
+          <%= image_tag "unplugged top.JPG", alt: "お花", id: "assets", class: "image", width: "450px" %>
+        </div>
+        <div class="center">
+          <p>コンピューターの画面内で行うプログラミング授業</p>
+          <%= image_tag "kanji top.png", alt: "お花", id: "assets", class: "image", width: "450px" %>
+        </div>
+        <div class="right">
+          <p>ロボットなどを操作して行うプログラミング授業</p>
+          <%= image_tag "physical.JPG", alt: "お花", id: "assets", class: "image", width: "450px" %>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class=box3>
+    <div class="teaching_materials">
+    
+      <a href="/micro_bit" target="_blank" > <img class="materials" src="assets/microbit-logo-stacked.png" alt="micro_bit"> </a>
+      <img class="materials" src="assets/viscuitbanner.jpg">
+      <img class="materials" src="assets/logo_robot.png">
+      <img class="materials" src="assets/embot rogo.png">
+      <img class="materials" src="assets/scratch rogo.jpg">
+    </div>
+  </div>
+</div
