@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :micro_bit
   resources :lessons do
     resources :comments, only: [:create]
+    resources :likes
   end
   resources :users
   resources :quizzes
