@@ -40,6 +40,7 @@
      background-position: center;
      background: no-repeat center center;
      background-size: contain;
+     background-image: url(../assets/green.jpg);
 }
 
 .more_list{
@@ -201,4 +202,8 @@
 
 .btn-denim:hover {
   border-style: solid;
+}
+
+.space{
+    height: 100px;
 }

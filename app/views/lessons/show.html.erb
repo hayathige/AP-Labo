@@ -1,9 +1,14 @@
-<div class="content_post" style="background-image: url(assets/back.jpg);">
+<div class="space">
+</div>
+<div class="content_post">
+  <!--<div class="lesson_box1">-->
     <% lesson = @lesson %>
-    <p><%= lesson.user.nickname %></p>
-    <p><%= lesson.subject %></p>
-    <p><%= lesson.text %><p/>
-    <%= image_tag lesson.image.variant(resize:'300x300'), class:lesson if lesson.image.attached? %>
+    <p class="nickname"><%= lesson.user.nickname %>先生の実践</p>
+    <p class="subject"><span id="abc"><%= lesson.subject %></span></p>
+    <div class="lesson">
+        <div class="lesson_text_text"><span id="lesson_text"><%= lesson.text %></span></div>
+        <div class="lesson_image"><%= image_tag lesson.image.variant(resize:'300x300'), class:lesson if lesson.image.attached? %></div>
+    </div>
     
     <% if user_signed_in? && current_user.id == lesson.user_id %>
      <ul class="more_list">
@@ -15,6 +20,7 @@
         </li>
      </ul>
     <% end %>
+  <!--<div>-->
 </div>
 
 <div class="comments">
