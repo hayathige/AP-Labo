@@ -26,6 +26,10 @@ li{
     font-size: 14px;
 }
 
+p{
+    margin: 0px;
+}
+
 .header_menu{
     margin: 0 0 0 auto;
     height: 65px;

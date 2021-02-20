@@ -1,17 +1,21 @@
 <div class="contents">   
-    <div class=lesson_box1>
+    <div class="lesson_box1">
         <% if user_signed_in? %>  
           <div class="user_nav grid-6">
             <span>〜<%= current_user.nickname %>さんでログイン中〜
-                <%= link_to "マイページ","/users/#{current_user.id}" %>
-                <button type=“button” onclick="location.href='/lessons/new'">投稿する</button>
+                <div class="container">
+                  <%= link_to "マイページ","/users/#{current_user.id}", class:'btn-box' %>
+                  <%= link_to "投稿する","/lessons/new", class:'btn-box' %>
+                </div>
             </span>
           </div>
         <% else %>
           <div class="grid-6">
-            <h3>投稿するにはログイン、またはユーザー登録をお願いします。</h3>
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            <h2>　投稿するにはログイン、またはユーザー登録をお願いします。</h2>
+                <div class="container">
+                  <%= link_to "ログイン", new_user_session_path, class: "btn-box" %>
+                  <%= link_to "新規登録", new_user_registration_path, class: "btn-box" %>
+                </div>
           </div>
         <% end %>
         
